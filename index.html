@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glowora Beauty</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="https://i.ibb.co/350JYpCy/IMG-3026.jpg" alt="Glowora Beauty Logo">
+            </div>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Cosmetics</a></li>
+                <li><a href="#">Skin</a></li>
+                <li><a href="#">Hair</a></li>
+                <li><a href="#">Fragrance</a></li>
+                <li><a href="#">Nails</a></li>
+                <li><a href="#">Discover</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="https://i.ibb.co/HTfFtpGs/4-FE1-CA2-B-15-FC-4089-A74-C-05-A6-D3320-FE6.jpg" alt="Glowora Beauty Cover">
+        <div class="hero-content">
+            <img src="https://i.ibb.co/kVN1VRgY/IMG-3065.jpg" alt="Glowora Beauty Product">
+            <h1>Glowora Beauty</h1>
+            <p>Shop now - 25% off and new products launching soon</p>
+            <a href="#" class="cta-button">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Contact: +91 7777777777</p>
+        <p>Follow us on <a href="https://www.instagram.com/divinedivas_makeupandbeauty?igsh=ZHp3bzR3cmIxNHVz&utm_source=qr" target="_blank">Instagram</a></p>
+    </footer>
+
+</body>
+</html><!-- Product Showcase Section -->
+<section class="product-showcase">
+    <h2>Explore Our Categories</h2>
+    <div class="product-container">
+        <div class="product-item">
+            <img src="https://i.ibb.co/8Gmbvg3/IMG-3081.jpg" alt="Facials">
+            <button class="product-btn">Facials</button>
+        </div>
+        <div class="product-item">
+            <img src="https://i.ibb.co/ZpSL22Vk/IMG-3080.jpg" alt="Accessories">
+            <button class="product-btn">Accessories</button>
+        </div>
+        <div class="product-item">
+            <img src="https://i.ibb.co/x81THcZQ/IMG-3079.jpg" alt="Cosmetics">
+            <button class="product-btn">Cosmetics</button>
+        </div>
+        <div class="product-item">
+            <img src="https://i.ibb.co/vCw8rMwL/IMG-3078.jpg" alt="Eye Palettes">
+            <button class="product-btn">Eye Palettes</button>
+        </div>
+        <div class="product-item">
+            <img src="https://i.ibb.co/bgc4gnS8/IMG-3077.jpg" alt="Nails">
+            <button class="product-btn">Nails</button>
+        </div>
+        <div class="product-item">
+            <img src="https://i.ibb.co/q3jW87kK/IMG-3076.jpg" alt="Body">
+            <button class="product-btn">Body</button>
+        </div>
+    </div>
+</section><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glowora Beauty</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Back Button -->
+    <a href="#" onclick="goBack()" class="back-button">← Home</a>
+
+    <header>
+        <h1>Glowora Beauty</h1>
+        <p>Explore our categories</p>
+    </header>
+
+    <!-- Buttons for categories -->
+    <div class="button-container">
+        <button class="product-btn" onclick="showSection('facials')">Facials</button>
+        <button class="product-btn" onclick="showSection('accessories')">Accessories</button>
+        <button class="product-btn" onclick="showSection('cosmetics')">Cosmetics</button>
+        <button class="product-btn" onclick="showSection('eye-palettes')">Eye Palettes</button>
+        <button class="product-btn" onclick="showSection('nails')">Nails</button>
+        <button class="product-btn" onclick="showSection('body')">Body</button>
+    </div>
+
+    <!-- Sections for each category -->
+    <section id="facials" class="content-section">
+        <h2>Facials</h2>
+        <p>Discover our range of facial products for glowing skin.</p>
+    </section>
+
+    <section id="accessories" class="content-section">
+        <h2>Accessories</h2>
+        <p>Find the perfect beauty accessories to complete your look.</p>
+    </section>
+
+    <section id="cosmetics" class="content-section">
+        <h2>Cosmetics</h2>
+        <p>Shop the best makeup products, including blushes, lipsticks, and more.</p>
+    </section>
+
+    <section id="eye-palettes" class="content-section">
+        <h2>Eye Palettes</h2>
+        <p>Explore our stunning collection of eye palettes for every occasion.</p>
+    </section>
+
+    <section id="nails" class="content-section">
+        <h2>Nails</h2>
+        <p>Get the perfect nail polish and care products for a flawless manicure.</p>
+    </section>
+
+    <section id="body" class="content-section">
+        <h2>Body</h2>
+        <p>Browse our body care collection for healthy and nourished skin.</p>
+    </section>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+                section.style.opacity = '0';
+            });
+
+            // Show the selected section with fade-in effect
+            const activeSection = document.getElementById(sectionId);
+            activeSection.style.display = 'block';
+            setTimeout(() => { activeSection.style.opacity = '1'; }, 100); 
+        }
+
+        function goBack() {
+            // Reloads the page to show the home section
+            window.location.reload();
+        }
+    </script>
+
+</body>
+</html>
